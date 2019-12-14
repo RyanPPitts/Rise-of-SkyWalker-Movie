@@ -1,3 +1,8 @@
+# Rise of Skywalker Project
+
+In anticipation I'm going to be putting together several star wars based projects.  This project uses ReactJS to create the interface. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
