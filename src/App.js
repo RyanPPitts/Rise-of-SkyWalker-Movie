@@ -1,29 +1,24 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import List from './components/List';
+import List from './components/List'; 
+import axios from 'axios'; 
 
-
-class App extends Component { 
+class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      people: [],
-
+      people: [], 
     }
 
-    this.getPeople = this.getPeople.bind(this);
+    this.getPeople = this.getPeople.bind(this); 
   }
 
-  // function to get the information from the API and AXIOS
   getPeople(){
-    return axios.get("https://swapi.co/api/people/")
-    // will return a promise
+    return axios.get("https://swapi.co/api/people")
     .then((response) => {
-      console.log(response.data.results);
-      this.setState( { people: response.data.results})
+      console.log(response.data.results); 
+      this.setState( { people: response.data.results } )
     })
-
   }
 
   componentDidMount(){
@@ -31,10 +26,9 @@ class App extends Component {
   }
 
   render() {
-    // es6 destructuring
-    const { people } = this.state;
-    return(
-      <div className='App'>
+    const {people} = this.state; 
+    return (
+      <div className="App">
         <List people={people} />
       </div>
     );
